@@ -1,4 +1,4 @@
-package net.proselyte.springsecurityapp.service;
+package ru.poas.catdog.service;
 
 /**
  * Service for Security.

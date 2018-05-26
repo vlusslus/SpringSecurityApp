@@ -7,7 +7,7 @@
         </encoder>
     </appender>
 
-    <logger name="net.proselyte.springsecurityapp">
+    <logger name="ru.poas.catdog">
         <level value="debug"/>
     </logger>
 

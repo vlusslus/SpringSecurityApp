@@ -1,9 +1,9 @@
-package net.proselyte.springsecurityapp.service;
+package ru.poas.catdog.service;
 
-import net.proselyte.springsecurityapp.dao.RoleDao;
-import net.proselyte.springsecurityapp.dao.UserDao;
-import net.proselyte.springsecurityapp.model.Role;
-import net.proselyte.springsecurityapp.model.User;
+import ru.poas.catdog.dao.RoleDao;
+import ru.poas.catdog.dao.UserDao;
+import ru.poas.catdog.model.Role;
+import ru.poas.catdog.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;

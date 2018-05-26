@@ -25,8 +25,22 @@
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         </form>
 
-        <h2>Welcome ${pageContext.request.userPrincipal.name} | <a onclick="document.forms['logoutForm'].submit()">Logout</a>
+        <h2>
+            Welcome ${pageContext.request.userPrincipal.name} | <a onclick="document.forms['logoutForm'].submit()">Logout</a>
         </h2>
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Theme</th>
+            </tr>
+            <c:forEach items="${themeList}" var="theme" varStatus="status">
+                <tr>
+                    <td>${theme.id}</td>
+                    <td>${theme.theme}</td>
+                </tr>
+            </c:forEach>
+        </table>
 
     </c:if>
 

@@ -1,4 +1,4 @@
-package net.proselyte.springsecurityapp.model;
+package ru.poas.catdog.model;
 
 import javax.persistence.*;
 import java.util.Set;

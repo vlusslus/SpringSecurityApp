@@ -1,17 +1,15 @@
 -- Table: users
 CREATE TABLE users (
-  id       INT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  id       INT          NOT NULL PRIMARY KEY,
   username VARCHAR(255) NOT NULL,
   password VARCHAR(255) NOT NULL
-)
-  ENGINE = InnoDB;
+);
 
 -- Table: roles
 CREATE TABLE roles (
-  id   INT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  id   INT          NOT NULL PRIMARY KEY,
   name VARCHAR(100) NOT NULL
-)
-  ENGINE = InnoDB;
+);
 
 -- Table for mapping user and roles: user_roles
 CREATE TABLE user_roles (
@@ -22,8 +20,7 @@ CREATE TABLE user_roles (
   FOREIGN KEY (role_id) REFERENCES roles (id),
 
   UNIQUE (user_id, role_id)
-)
-  ENGINE = InnoDB;
+);
 
 -- Insert data
 

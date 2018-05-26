@@ -1,9 +1,9 @@
-package net.proselyte.springsecurityapp.controller;
+package ru.poas.catdog.controller;
 
-import net.proselyte.springsecurityapp.model.User;
-import net.proselyte.springsecurityapp.service.SecurityService;
-import net.proselyte.springsecurityapp.service.UserService;
-import net.proselyte.springsecurityapp.validator.UserValidator;
+import ru.poas.catdog.model.User;
+import ru.poas.catdog.service.SecurityService;
+import ru.poas.catdog.service.UserService;
+import ru.poas.catdog.validator.UserValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
- * Controller for {@link net.proselyte.springsecurityapp.model.User}'s pages.
+ * Controller for {@link User}'s pages.
  *
  * @author Eugene Suleimanov
  * @version 1.0

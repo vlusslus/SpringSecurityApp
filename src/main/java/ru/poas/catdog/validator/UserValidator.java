@@ -1,7 +1,7 @@
-package net.proselyte.springsecurityapp.validator;
+package ru.poas.catdog.validator;
 
-import net.proselyte.springsecurityapp.model.User;
-import net.proselyte.springsecurityapp.service.UserService;
+import ru.poas.catdog.model.User;
+import ru.poas.catdog.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
@@ -9,7 +9,7 @@ import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
 /**
- * Validator for {@link net.proselyte.springsecurityapp.model.User} class,
+ * Validator for {@link User} class,
  * implements {@link Validator} interface.
  *
  * @author Eugene Suleimanov
