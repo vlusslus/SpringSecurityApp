@@ -30,3 +30,7 @@ INSERT INTO roles VALUES (1, 'ROLE_USER');
 INSERT INTO roles VALUES (2, 'ROLE_ADMIN');
 
 INSERT INTO user_roles VALUES (1, 2);
+
+UPDATE users SET username = 'vlus' WHERE id = 1;
+
+UPDATE users SET password = '$2a$04$xSXCnGX9VNpePyY9HV7/O.97SNqOGWOi/pCBnitRqDuT8ktnQpvkO' WHERE id = 1;

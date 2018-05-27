@@ -1,29 +1,27 @@
 package ru.poas.catdog.model;
 
-import org.hibernate.annotations.GeneratorType;
-import org.springframework.data.annotation.Id;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import javax.persistence.*;
 
 /**
  * Created by vlusslus on 26.05.2018.
  */
 
 @Entity
+@Table(name = "animals")
 public class Animal {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Long id;
 
     @Column(name = "name")
     private String name;
 
     @Column(name = "comment")
     private String comment;
+
+    public Animal() {
+    }
 
     public String getComment() {
         return comment;
@@ -33,7 +31,7 @@ public class Animal {
         return name;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
@@ -41,7 +39,7 @@ public class Animal {
         this.name = name;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

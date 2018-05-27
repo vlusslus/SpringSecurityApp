@@ -15,6 +15,7 @@
     <hibernate.version>4.3.11.Final</hibernate.version>
     <hibernate-validator.version>5.2.1.Final</hibernate-validator.version>
     <mysql-connector.version>5.1.36</mysql-connector.version>
+    <postgres-jdbc.version>9.1-901.jdbc4</postgres-jdbc.version>
     <commons-dbcp.version>1.4</commons-dbcp.version>
     <jstl.version>1.2</jstl.version>
     <junit.version>3.8.1</junit.version>
@@ -97,12 +98,12 @@
       <version>${logback.version}</version>
     </dependency>
 
-      <dependency>
-          <groupId>postgresql</groupId>
-          <artifactId>postgresql</artifactId>
-          <version>9.1-901.jdbc4</version>
-      </dependency>
-
+    <dependency>
+      <groupId>postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>${postgres-jdbc.version}</version>
+    </dependency>
+    
   </dependencies>
   <build>
     <finalName>SpringSecurityApp</finalName>
