@@ -29,15 +29,19 @@
             Welcome ${pageContext.request.userPrincipal.name} | <a onclick="document.forms['logoutForm'].submit()">Logout</a>
         </h2>
 
-        <table>
+        <table class="table">
+            <thead>
             <tr>
-                <th>ID</th>
-                <th>Theme</th>
+                <th scope="col">#</th>
+                <th scope="col">Описание</th>
+                <th scope="col">Место проведения</th>
             </tr>
-            <c:forEach items="${themeList}" var="theme" varStatus="status">
+            </thead>
+            <c:forEach items="${exhibList}" var="exhibList">
                 <tr>
-                    <td>${theme.id}</td>
-                    <td>${theme.theme}</td>
+                    <td>${exhibList.id}</td>
+                    <td>${exhibList.description}</td>
+                    <td>${exhibList.location}</td>
                 </tr>
             </c:forEach>
         </table>

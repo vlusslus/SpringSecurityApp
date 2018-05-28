@@ -1,7 +1,9 @@
 package ru.poas.catdog.service;
 
+import ru.poas.catdog.dao.ExhibitionOrgDao;
 import ru.poas.catdog.dao.RoleDao;
 import ru.poas.catdog.dao.UserDao;
+import ru.poas.catdog.model.ExhibitionOrg;
 import ru.poas.catdog.model.Role;
 import ru.poas.catdog.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +11,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -28,6 +31,9 @@ public class UserServiceImpl implements UserService {
     private RoleDao roleDao;
 
     @Autowired
+    private ExhibitionOrgDao exhibitionOrgDao;
+
+    @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Override
@@ -42,5 +48,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public User findByUsername(String username) {
         return userDao.findByUsername(username);
+    }
+
+    @Override
+    public List<ExhibitionOrg> getAll() {
+        return exhibitionOrgDao.findAll();
     }
 }

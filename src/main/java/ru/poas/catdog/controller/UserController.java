@@ -1,5 +1,6 @@
 package ru.poas.catdog.controller;
 
+import ru.poas.catdog.model.ExhibitionOrg;
 import ru.poas.catdog.model.User;
 import ru.poas.catdog.service.SecurityService;
 import ru.poas.catdog.service.UserService;
@@ -11,6 +12,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import java.util.List;
 
 /**
  * Controller for {@link User}'s pages.
@@ -68,6 +71,8 @@ public class UserController {
 
     @RequestMapping(value = {"/", "/welcome"}, method = RequestMethod.GET)
     public String welcome(Model model) {
+        List<ExhibitionOrg> orgs = userService.getAll();
+        model.addAttribute("exhibList", orgs);
         return "welcome";
     }
 
